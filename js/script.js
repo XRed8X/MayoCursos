@@ -30,7 +30,7 @@ setInterval(setBg, 5000)
 
 // quizz
 
-// Datos del quiz: array de objetos con preguntas y respuestas
+// Datos del quiz: array de objetos con preguntas y respuestas.
 const quizData = [
     {
         question: "¿Cuál es la principal diferencia entre un café espresso y un café americano?",
