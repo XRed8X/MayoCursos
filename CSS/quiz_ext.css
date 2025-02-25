@@ -1,0 +1,139 @@
+/* Estilos para el contenedor principal */
+main {
+    width: 100%; /* El ancho del contenedor es del 100% */
+    display: grid; /* Usa grid layout */
+    place-items: center; /* Centra los elementos dentro del grid */
+}
+
+/* Estilos para el contenedor del quiz */
+.quiz-container {
+    background-color: #fff; /* Color de fondo blanco */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 0 10px 2px rgba(100, 100, 100, 0.1); /* Sombra alrededor del contenedor */
+    width: 600px; /* Ancho fijo de 600px */
+    overflow: hidden; /* Oculta contenido que se desborda */
+    display: grid; /* Usa grid layout */
+    place-items: center; /* Centra los elementos dentro del grid */
+    margin-bottom: 110px; /* Margen inferior de 110px */
+}
+
+/* Estilos para el encabezado del quiz */
+.quiz-header {
+    padding: 4rem; /* Relleno de 4rem */
+}
+
+/* Estilos para los encabezados h3 */
+h3 {
+    font-size: 50px; /* Tamaño de fuente de 50px */
+}
+
+/* Estilos para los encabezados h4 */
+h4 {
+    padding: 1rem; /* Relleno de 1rem */
+    font-size: 30px; /* Tamaño de fuente de 30px */
+    text-align: center; /* Texto centrado */
+    margin: 0; /* Sin margen */
+}
+
+/* Estilos para las listas no ordenadas */
+ul {
+    list-style-type: none; /* Sin estilo de lista */
+    padding: 0; /* Sin relleno */
+}
+
+/* Estilos para los elementos de lista */
+ul li {
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    margin: 1rem 0; /* Margen vertical de 1rem */
+}
+
+/* Estilos para las etiquetas dentro de los elementos de lista */
+ul li label {
+    cursor: pointer; /* Cursor en forma de puntero */
+}
+
+/* Estilos para los botones */
+button {
+    background-color: rgb(204, 109, 0); /* Color de fondo naranja */
+    color: #fff; /* Color de texto blanco */
+    border: none; /* Sin borde */
+    display: block; /* Se muestra como un bloque */
+    width: 100%; /* Ancho del 100% */
+    cursor: pointer; /* Cursor en forma de puntero */
+    font-size: 20px; /* Tamaño de fuente de 20px */
+    font-family: inherit; /* Hereda la familia de fuente */
+    padding: 1.3rem; /* Relleno de 1.3rem */
+    height: 70px; /* Altura de 70px */
+}
+
+/* Estilos para el botón en estado hover */
+button:hover {
+    background-color: rgb(134, 72, 0); /* Color de fondo marrón oscuro */
+}
+
+/* Estilos para el botón en estado focus */
+button:focus {
+    outline: none; /* Sin contorno */
+    background-color: rgb(134, 72, 0); /* Color de fondo marrón oscuro */
+}
+
+/* Estilos para la imagen gif de puntaje */
+.scores_gif {
+    width: 170px; /* Ancho de 170px */
+    margin: 10px; /* Margen de 10px */
+}
+
+/* Estilos para el contenedor de progreso */
+.progress-container {
+  display: flex; /* Usa flexbox */
+  justify-content: space-between; /* Distribuye elementos con espacio entre ellos */
+  position: relative; /* Posición relativa */
+  margin-bottom: 30px; /* Margen inferior de 30px */
+  max-width: 100%; /* Ancho máximo del 100% */
+  width: 350px; /* Ancho fijo de 350px */
+}
+
+/* Pseudo-elemento para la línea de progreso vacía */
+.progress-container::before {
+  content: ''; /* Contenido vacío */
+  background-color: var(--line-border-empty); /* Color de fondo de la línea */
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Centrado vertical */
+  left: 0; /* Alineado a la izquierda */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  height: 4px; /* Altura de 4px */
+  width: 100%; /* Ancho del 100% */
+  z-index: -1; /* Z-index para posicionar detrás */
+}
+
+/* Estilos para la barra de progreso */
+.progress {
+  background-color: rgb(204, 109, 0); /* Color de fondo naranja */
+  position: absolute; /* Posición absoluta */
+  top: 50%; /* Centrado vertical */
+  left: 0; /* Alineado a la izquierda */
+  transform: translateY(-50%); /* Ajuste para centrar */
+  height: 4px; /* Altura de 4px */
+  width: 0%; /* Ancho inicial del 0% */
+  z-index: -1; /* Z-index para posicionar detrás */
+  transition: 0.4s ease; /* Transición suave */
+}
+
+/* Estilos para los círculos de progreso */
+.circle {
+  background-color: rgb(204, 109, 0); /* Color de fondo naranja */
+  color: #ffffff; /* Color de texto blanco */
+  border-radius: 50%; /* Forma circular */
+  height: 30px; /* Altura de 30px */
+  width: 30px; /* Ancho de 30px */
+  display: flex; /* Usa flexbox */
+  align-items: center; /* Centrado vertical */
+  justify-content: center; /* Centrado horizontal */
+  border: 3px solid var(--line-border-empty); /* Borde sólido */
+  transition: 0.4s ease; /* Transición suave */
+}
+
+/* Estilos para los círculos activos */
+.circle.active {
+  border-color: var(--line-border-fill); /* Color de borde para el círculo activo */
+}
